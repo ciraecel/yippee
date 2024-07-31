@@ -1,0 +1,41 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+#image-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+#interactive-image {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: #ff0000;
+    animation: confetti-animation 3s linear;
+    opacity: 0;
+}
+
+@keyframes confetti-animation {
+    0% { 
+        opacity: 1; 
+        transform: translateY(0) rotate(0deg); 
+    }
+    100% { 
+        opacity: 0; 
+        transform: translateY(100vh) rotate(720deg); 
+    }
+}
